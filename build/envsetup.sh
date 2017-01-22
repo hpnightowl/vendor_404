@@ -16,8 +16,13 @@
 
 function __print_p404_functions_help() {
 cat <<EOF
+- mka:             Builds using SCHED_BATCH on all processors.
 - repopick:        Utility to fetch changes from Gerrit.
 EOF
+}
+
+function mka() {
+    m -j "$@"
 }
 
 function repopick()
