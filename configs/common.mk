@@ -23,6 +23,10 @@ $(call inherit-product, vendor/404/sdclang/sdclang.mk)
 # Inherit version definations
 $(call inherit-product, vendor/404/configs/version.mk)
 
+# Include properties makefile
+$(call inherit-product, vendor/404/configs/properties.mk)
+
 # Disable EAP Proxy because it depends on proprietary headers
 # and breaks WPA Supplicant compilation.
 DISABLE_EAP_PROXY := true
+
