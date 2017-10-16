@@ -46,3 +46,8 @@ PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
 # Enforce privapp-permissions whitelist
 PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
     ro.control_privapp_permissions=enforce
+
+# Volume Steps
+PRODUCT_SYSTEM_DEFAULT_PROPERTIES += \
+    ro.config.bt_sco_vol_steps=30 \
+    ro.config.media_vol_steps=30
