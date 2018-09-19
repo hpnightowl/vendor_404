@@ -14,14 +14,20 @@
 # limitations under the License.
 #
 
-# Inherit from common Qualcomm device
-$(call inherit-product, device/qcom/common/common.mk)
+SOONG_CONFIG_NAMESPACES += p404VarsPlugin
 
-# Include definitions for Snapdragon Clang
-$(call inherit-product, vendor/404/sdclang/sdclang.mk)
+SOONG_CONFIG_p404VarsPlugin :=
 
-# Kernel
-include vendor/404/configs/BoardConfigKernel.mk
+define addVar
+  SOONG_CONFIG_p404VarsPlugin += $(1)
+  SOONG_CONFIG_p404VarsPlugin_$(1) := $$(subst ",\",$$($1))
+endef
 
-# Soong
-include vendor/404/configs/BoardConfigSoong.mk
+$(foreach v,$(EXPORT_TO_SOONG),$(eval $(call addVar,$(v))))
+
+SOONG_CONFIG_NAMESPACES += p404GlobalVars
+SOONG_CONFIG_p404GlobalVars +=
+
+# Set default values
+
+# Soong value variables
