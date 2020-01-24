@@ -14,6 +14,11 @@
 # limitations under the License.
 #
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger_res_images \
+    product_charger_res_images
+
 # Include support for additional filesystems
 PRODUCT_PACKAGES += \
     e2fsck \
