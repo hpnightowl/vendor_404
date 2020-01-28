@@ -20,6 +20,10 @@ $(call inherit-product, device/qcom/common/common.mk)
 # Include definitions for Snapdragon Clang
 $(call inherit-product, vendor/404/sdclang/sdclang.mk)
 
+# Disable EAP Proxy because it depends on proprietary headers
+# and breaks WPA Supplicant compilation.
+DISABLE_EAP_PROXY := true
+
 # Kernel
 include vendor/404/configs/BoardConfigKernel.mk
 
