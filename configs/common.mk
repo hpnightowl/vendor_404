@@ -23,6 +23,9 @@ $(call inherit-product, vendor/404/sdclang/sdclang.mk)
 # Inherit version definations
 $(call inherit-product, vendor/404/configs/version.mk)
 
+# Include packages makefile
+$(call inherit-product, vendor/404/configs/packages.mk)
+
 # Include properties makefile
 $(call inherit-product, vendor/404/configs/properties.mk)
 
