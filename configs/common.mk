@@ -30,3 +30,5 @@ $(call inherit-product, vendor/404/configs/properties.mk)
 # and breaks WPA Supplicant compilation.
 DISABLE_EAP_PROXY := true
 
+# Move Wi-Fi modules to vendor
+PRODUCT_VENDOR_MOVE_ENABLED := true
