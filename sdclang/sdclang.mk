@@ -14,8 +14,5 @@
 # limitations under the License.
 #
 
-# Inherit from common Qualcomm device
-$(call inherit-product, device/qcom/common/common.mk)
-
-# Include definitions for Snapdragon Clang
-$(call inherit-product, vendor/404/sdclang/sdclang.mk)
+# Define Snapdragon Clang LTO definition.
+SDCLANG_LTO_DEFS := vendor/qcom/opensource/core-utils/build/sdllvm-lto-defs.mk

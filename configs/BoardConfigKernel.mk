@@ -14,8 +14,16 @@
 # limitations under the License.
 #
 
-# Inherit from common Qualcomm device
-$(call inherit-product, device/qcom/common/common.mk)
+# Architecture
+TARGET_KERNEL_ARCH := arm64
 
-# Include definitions for Snapdragon Clang
-$(call inherit-product, vendor/404/sdclang/sdclang.mk)
+# Cross compile env
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/aarch64/aarch64-linux-android-4.9/bin/aarch64-linux-android-
+TARGET_KERNEL_CROSS_COMPILE_ARM32_PREFIX := $(shell pwd)/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9/bin/arm-linux-androideabi-
+
+# LLVM support
+KERNEL_LLVM_SUPPORT := true
+KERNEL_SD_LLVM_SUPPORT ?= true
+
+# Qualcomm kernel
+TARGET_COMPILE_WITH_MSM_KERNEL := true

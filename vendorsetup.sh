@@ -14,8 +14,6 @@
 # limitations under the License.
 #
 
-# Inherit from common Qualcomm device
-$(call inherit-product, device/qcom/common/common.mk)
-
-# Include definitions for Snapdragon Clang
-$(call inherit-product, vendor/404/sdclang/sdclang.mk)
+# SDClang Environment Variables.
+export SDCLANG_CONFIG=$(pwd)/vendor/404/sdclang/sdclang.json
+export SDCLANG_AE_CONFIG="${SDCLANG_CONFIG}"
