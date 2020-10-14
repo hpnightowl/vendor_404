@@ -29,5 +29,9 @@ SOONG_CONFIG_NAMESPACES += p404GlobalVars
 SOONG_CONFIG_p404GlobalVars +=
 
 # Set default values
+TARGET_INIT_VENDOR_LIB ?= vendor_init
 
 # Soong value variables
+SOONG_CONFIG_p404GlobalVars_target_init_vendor_lib := $(TARGET_INIT_VENDOR_LIB)
+SOONG_CONFIG_p404GlobalVars_target_ld_shim_libs := $(subst $(space),:,$(TARGET_LD_SHIM_LIBS))
+SOONG_CONFIG_p404GlobalVars_target_process_sdk_version_override := $(TARGET_PROCESS_SDK_VERSION_OVERRIDE)
