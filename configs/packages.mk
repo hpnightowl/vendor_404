@@ -57,6 +57,11 @@ PRODUCT_PACKAGES += \
     Camera \
     RepainterServicePriv
 
+# 2019 Material product sounds (CC-BY 4.0)
+# Source: https://material.io/design/sound/sound-resources.html
+PRODUCT_COPY_FILES += \
+    $(call find-copy-subdir-files,*,vendor/404/sounds/material/,$(TARGET_COPY_OUT_PRODUCT)/media/audio)
+
 # SystemUI plugins
 PRODUCT_PACKAGES += \
     QuickAccessWallet
