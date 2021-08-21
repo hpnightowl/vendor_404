@@ -33,6 +33,9 @@ DISABLE_EAP_PROXY := true
 # Move Wi-Fi modules to vendor
 PRODUCT_VENDOR_MOVE_ENABLED := true
 
+# Filesystem
+TARGET_FS_CONFIG_GEN += vendor/404/configs/config.fs
+
 # Permissions
 PRODUCT_COPY_FILES += \
     vendor/404/configs/permissions/privapp-permissions-qti.xml:$(TARGET_COPY_OUT_SYSTEM)/etc/permissions/privapp-permissions-qti.xml \
