@@ -14,15 +14,8 @@
 # limitations under the License.
 #
 
-# Inherit from common Qualcomm device
-$(call inherit-product, device/qcom/common/common.mk)
+# Kernel
+include vendor/404/configs/BoardConfigKernel.mk
 
-# Include definitions for Snapdragon Clang
-$(call inherit-product, vendor/404/sdclang/sdclang.mk)
-
-# Inherit version definations
-$(call inherit-product, vendor/404/configs/version.mk)
-
-# Disable EAP Proxy because it depends on proprietary headers
-# and breaks WPA Supplicant compilation.
-DISABLE_EAP_PROXY := true
+# Soong
+include vendor/404/configs/BoardConfigSoong.mk
