@@ -53,7 +53,6 @@ PRODUCT_PACKAGES += \
     ExactCalculator \
     Covers \
     ThemePicker \
-    AbleMusic \
     Updater \
     Camera \
     RepainterServicePriv
