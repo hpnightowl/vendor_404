@@ -50,6 +50,7 @@ PRODUCT_PACKAGES += \
 # 404 Packages
 PRODUCT_PACKAGES += \
     P404Launcher \
+    ExactCalculator \
     Covers \
     ThemePicker \
     AbleMusic \
